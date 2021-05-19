@@ -4,24 +4,29 @@ require("config/common.php");
 
 /* Подключение к БД */
 require("includes/mysqli.inc.php");
+
+/* Стартуем сессию */
+session_start();
 ?>
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Team Cook">
-    <meta name="keywords" content="холодильник, рецепты">
 
-    <title>Fridge</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Team Cook">
+  <meta name="keywords" content="холодильник, рецепты">
 
-    <!-- CSS -->
-    <?php require("templates/styles.tpl.php"); ?>
-  </head>
-  <body>
-    <?php require("templates/header.tpl.php"); ?>
-    
+  <title><?= SITE_NAME ?></title>
+
+  <!-- CSS -->
+  <?php require("templates/styles.tpl.php"); ?>
+</head>
+
+<body>
+  <?php require("templates/header.tpl.php"); ?>
+
   <div class="container-fluid">
     <div class="row">
       <?php require("templates/sidebar.tpl.php"); ?>
@@ -33,7 +38,8 @@ require("includes/mysqli.inc.php");
   </div>
 
   <?php require("templates/scripts.tpl.php"); ?>
-  </body>
+</body>
+
 </html>
 <?php
 /* Закрываем соединение с БД */
