@@ -1,5 +1,5 @@
 <div class="container my-5">
-    <h1>Добавление ингридиентов</h1>
+    <h1>Добавление ингредиентов</h1>
     <form class="form-add mx-auto" action="add.php" method="post">
         <?= $formError ?>
         <div class="mb-3">
