@@ -8,15 +8,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="recipes.php">
                     <i class="fas fa-book"></i>
-                    Поиск рецептов
+                    Рецепты
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="ingredients.php">
                     <i class="fas fa-carrot"></i>
-                    Поиск ингридиентов
+                    Ингридиенты
                 </a>
             </li>
         </ul>
