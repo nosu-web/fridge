@@ -7,6 +7,23 @@ require("includes/mysqli.inc.php");
 
 /* Проверка авторизации */
 require("includes/auth.inc.php");
+
+$ingMeasureOptions = "";
+$result = $mysqli->query("SELECT * FROM measure");
+while($row = $result->fetch_assoc()){
+  $measureId = $row["id"];
+  $measureName = $row["name"];
+  $measureShortname = $row["shortname"];
+  $ingMeasureOptions .= "<option value=\"$measureId\">$measureShortname</option>";
+}
+
+if(isset($_POST["addSubmit"]))
+{
+  $ingName = $_POST["ingName"];
+  $ingMeasure = $_POST["ingMeasure"];
+
+  $mysqli->query("INSERT INTO products (name, measure_id) VALUES ('$ingName', $ingMeasure)");
+}
 ?>
 <!doctype html>
 <html lang="ru">
