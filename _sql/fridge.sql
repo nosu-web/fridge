@@ -106,7 +106,8 @@ DROP TABLE IF EXISTS `recipes_products`;
 CREATE TABLE `recipes_products` (
   `id` int(11) NOT NULL,
   `recipes_id` int(11) NOT NULL,
-  `products_id` int(11) NOT NULL
+  `products_id` int(11) NOT NULL,
+  `amount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
