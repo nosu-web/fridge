@@ -4,10 +4,10 @@
         <?= $formError ?>
         <div class="mb-3">
             <label for="ingName" class="form-label">Название</label>
-            <input type="text" name="ingName" class="form-control" id="ingName">
+            <input type="text" name="ingName" class="form-control" id="ingName" required>
         </div>
         <div class="mb-3">
-            <select class="form-select" name="ingMeasure" id="ingMeasure">
+            <select class="form-select" name="ingMeasure" id="ingMeasure" required>
                 <?= $ingMeasureOptions ?>
             </select>
         </div>

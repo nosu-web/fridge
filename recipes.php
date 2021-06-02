@@ -8,7 +8,7 @@ require("includes/mysqli.inc.php");
 /* Проверка авторизации */
 require("includes/auth.inc.php");
 
-$productOptions = "";
+$productOptions = "<option hidden>ингредиент</option>";
 $result = $mysqli->query("
 SELECT
     products.id as productId,

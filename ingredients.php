@@ -8,7 +8,7 @@ require("includes/mysqli.inc.php");
 /* Проверка авторизации */
 require("includes/auth.inc.php");
 
-$ingMeasureOptions = "";
+$ingMeasureOptions = "<option hidden>ед. измерения</option>";
 $result = $mysqli->query("SELECT * FROM measure");
 while($row = $result->fetch_assoc()){
   $measureId = $row["id"];

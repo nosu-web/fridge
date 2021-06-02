@@ -2,7 +2,7 @@
     <div class="position-sticky pt-3">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a class="nav-link active" aria-current="page" href="/">
                     <i class="fas fa-utensils"></i>
                     Мой холодильник
                 </a>
@@ -16,7 +16,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="ingredients.php">
                     <i class="fas fa-carrot"></i>
-                    Ингридиенты
+                    Ингредиенты
                 </a>
             </li>
         </ul>

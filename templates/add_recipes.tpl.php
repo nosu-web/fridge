@@ -1,17 +1,24 @@
 <div class="container my-5">
     <h1>Добавление рецепта</h1>
-    <form class="form-add mx-auto" action="recipes.php" method="post">
+    <form class="form-add mx-auto mt-5" action="recipes.php" method="post">
         <?= $formError ?>
         <div class="mb-3">
-            <label for="recipeName" class="form-label">Название</label>
-            <input type="text" name="recipeName" class="form-control" id="recipeName">
+            <input type="text" name="recipeName" class="form-control" id="recipeName" placeholder="Название рецепта" required>
         </div>
-        <div class="mb-3">
-            <select class="form-select" name="recipeProduct" id="recipeProduct">
-                <?= $productOptions ?>
-            </select>
+        <h3>Ингредиенты</h3>
+        <div class="row mb-3">
+            <div class="col">
+                <select class="form-select" name="recipeProduct" id="recipeProduct" required>
+                    <?= $productOptions ?>
+                </select>
+            </div>
+            <div class="col">
+                <input type="text" name="ingAmount" class="form-control" id="ingAmount" placeholder="Количество" required>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="recipeMeasure" id="recipeMeasure" value="<?= $productMeasure ?>" disabled>
+            </div>
         </div>
-        <div><?= $productMeasure ?></div>
         <button type="submit" name="addSubmit" class="btn btn-success">Добавить</button>
     </form>
 </div>
