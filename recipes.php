@@ -20,7 +20,7 @@ while($row = $result->fetch_assoc()) {
   $productId = $row["productId"];
   $productName = $row["productName"];
   $productMeasure = $row["measureName"];
-  $productOptions .= "<option value=\"$productId\">$productName</option>";
+  $productOptions .= "<option value=\"$productId\" data-measure=\"$productMeasure\">$productName</option>";
 }
 
 if(isset($_POST["addSubmit"]))
